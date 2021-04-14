@@ -1,7 +1,7 @@
 ---
 title: "Coursera Practical Machine Learning Final Project"
-author: "Kevin Huang"
-date: "November 16, 2017"
+author: "TOLA HENG"
+date: "April 14,2021"
 output: html_document
 ---
 # Background
@@ -42,7 +42,6 @@ training <- read.csv(trainFile)
 testing <- read.csv(testFile)
 dim(training)
 ```
-
 ### Data Partition
 ```{r, cache=TRUE, message=FALSE}
 inTrain <- createDataPartition(training$classe, p = .6, list = FALSE)
@@ -84,10 +83,7 @@ First of all, we will build a Random Forest model and perform a prediction.
 mod.rf <- train(classe ~., data = df.train, method = "rf",
                 trControl = trainControl("cv", number = 5))
 mod.rf$finalModel
-
-
 ```
-
 
 #### Prediction with Random Forest Model
 ```{r, cache=TRUE, message=FALSE}
